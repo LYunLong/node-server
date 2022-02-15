@@ -13,8 +13,10 @@ router.get('/dbtest',function(req, res){
         console.log('inserted id is:' + id);
     });
     db.close(connection);
-    return;
+    res.send('81818');
 });
+
+app.use('/interface', router);
 
 app.use(express.static('./dist'))
 
